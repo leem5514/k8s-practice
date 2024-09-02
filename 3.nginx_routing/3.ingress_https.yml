@@ -73,9 +73,9 @@ spec:
   issuerRef:
     name: letsencrypt-prod
     kind: ClusterIssuer
-  commonName: server.dding.store
+  commonName: server.dding.shop
   dnsNames:
-  - server.dding.store
+  - server.dding.shop
   
 ---
 apiVersion: networking.k8s.io/v1
@@ -90,10 +90,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - "server.dding.store"
+    - "server.dding.shop"
     secretName: dding-com-tls
   rules:
-  - host: server.dding.store
+  - host: server.dding.shop
     http:
       paths:
       - path: /product-service/(.*) 
