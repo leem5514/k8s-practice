@@ -46,7 +46,7 @@ metadata:
     nginx.ingress.kubernates.io/rewrite-target: /$1 #첫번째 prefix제거 후 endpoint 전달
 spec:
   rules:
-  - host: server.dding.store
+  - host: server.dding.shop
     http:
       paths:
       - path: /product-service/(.*)
