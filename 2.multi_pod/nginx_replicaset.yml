@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
   name: nginx-replicaset
-  namespace: natural
+  namespace: dding
 spec:
   replicas: 2
   # 아래 요소는 replicaset이 관리할 Pod를 선택하기 위한 이름
@@ -27,7 +27,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: nginx-service
-  namespace: natural
+  namespace: dding
 spec:
   type: NodePort
   ports:
